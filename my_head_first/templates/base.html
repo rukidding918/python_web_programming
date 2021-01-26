@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <style>
+        body {
+            display: grid;
+            place-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="page-header">{{ title }}</h1>
+        <div class="row">
+        {% if session['logged_in'] %}
+            {% block content %}
+            {% endblock %}
+        {% else %}
+            {% block noPermission %}
+            {% endblock %}
+        {% endif %}
+        </div>
+    </div>
+    {% if session['logged_in'] %}
+        {% include 'footer.html' %}
+    {% endif %}
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+</body>
+</html>

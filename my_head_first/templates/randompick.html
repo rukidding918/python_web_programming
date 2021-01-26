@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="col-md-8">
+    <table class="table table-striped table-hover">
+        <thead class="bg-success">
+            <tr>
+                <td>번호</td>
+                <td>식당이름</td>
+                <td>메뉴</td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for infos in picked_restaurant %}
+            <tr>
+                {% for item in infos %}
+                <td>{{ item }}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <form action="/savepick" method="POST">
+        <input type="text" name="restaurant" value="{{ picked_restaurant[0][0] }}" style="display:none;" readonly>
+        <button type="submit" class="btn btn-success">여기 갈거야. 저장~♡</button>
+        <a class="btn btn-danger" href="/randompic" role="button">맘에 안들면 다시 눌러봐!</a>
+        <a class="btn btn-info" href="/" role="button">리스트 다시 볼래?</a>
+    </form>
+</div>
+
+{% include 'append.html' %}
+
+{% endblock %}

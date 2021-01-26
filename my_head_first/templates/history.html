@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="col-md-8">
+    <table class="table table-striped table-hover">
+        <thead class="bg-success">
+            <tr>
+                <td>번호</td>
+                <td>날짜</td>
+                <td>식당이름</td>
+                <td>메뉴</td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for restaurant in restaurants %}
+            <tr>
+                {% for item in restaurant %}
+                <td>{{ item }}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% if picked_restaurant %}
+        <p>오늘 갈 곳은 <b class="badge badge-primary text-wrap">{{ picked_restaurant[-2] }}</b>입니다.</p>
+    {% endif %}
+    <a class="btn btn-success" href="/" role="button">돌아가기</a>
+</div>
+
+{% include 'append.html' %}
+
+{% endblock %}
