@@ -24,3 +24,19 @@ def index(request):
     
 class BookListView(generic.ListView):
     model = Book
+    paginate_by = 2
+    
+    def get_context_data(self, **kwargs):
+        context = super(BookListView, self).get_context_data(**kwargs)
+        context['some_data'] = 'This is just some data'
+        return context
+        
+class BookDetailView(generic.DetailView):
+    model = Book
+    
+class AuthorListView(generic.ListView):
+    model = Author
+    
+    def get_context_data(self, **kwargs):
+        context = super(AuthorListView, self).get_context_data(**kwargs)
+        context['some_author'] = 'This is just some data'
