@@ -27,7 +27,8 @@ class BookListView(generic.ListView):
     paginate_by = 2
     
     def get_context_data(self, **kwargs):
-        context = super(BookListView, self).get_context_data(**kwargs)
+        context = super().get_context_data(**kwargs)
+        # context = super(BookListView, self).get_context_data(**kwargs)
         context['some_data'] = 'This is test book data'
         return context
         
@@ -39,7 +40,8 @@ class AuthorListView(generic.ListView):
     paginate_by = 2
     
     def get_context_data(self, **kwargs):
-        context = super(AuthorListView, self).get_context_data(**kwargs)
+        context = super().get_context_data(**kwargs)
+        # context = super(AuthorListView, self).get_context_data(**kwargs)
         context['some_author'] = 'This is test author data'
         return context
         
