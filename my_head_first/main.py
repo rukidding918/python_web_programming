@@ -1,10 +1,14 @@
 import mysql.connector
 from flask import Flask, render_template, request, redirect, session
 from checker import check_logged_in
-from config import dbconfig, secret_key, admin_id, admin_phone
+from secrets.config import dbconfig, secret_key, admin_id, admin_phone
 
 # create table restaurant ( resid int primary key auto_increment, restaurant varchar(20) not null, menu varchar(20) not null );
 # create table history ( hisid int primary key auto_increment, date date, resid int, foreign key(resid) references restaurant (resid) );
+
+# zappa를 이용하여 aws lambda에서 서비스를 할 계획
+# but 나는 python 3.6을 위한 환경을 구축하기 귀찮으므로
+# 기왕 공부도 할 겸 github action을 통해 aws lambda에 올리도록 하자.
 
 app = Flask(__name__)
 app.secret_key = secret_key
