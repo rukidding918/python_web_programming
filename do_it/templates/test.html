@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM</title>
+</head>
+<body>
+    <script>
+        let Member = class {
+            getName() {
+                return '이름';
+            }
+        };
+        let obj = new Member();
+        console.log(obj.getName());
+
+        let Member = class Inner {
+            getName() {
+                return '이름';
+            }
+        };
+
+        let obj1 = new Member();
+        console.log(obj1.getName());
+    </script>
+</body>
+</html>

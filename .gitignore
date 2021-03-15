@@ -2,6 +2,11 @@
 *.pem
 /secrets
 /secret
+secret
+secret.*
+config
+config.*
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
