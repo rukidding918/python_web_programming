@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>About</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <style>
+    body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: #060c21;
+        font-family: 'Do Hyeon', sans-serif;
+    }
+
+    .box {
+        position: relative;
+        width: 300px;
+        height: 600px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #060c21;
+    }
+    .box:before {
+        content:'';
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        background: #fff;
+        z-index: -1;
+    }
+    .box:after {
+        content:'';
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        background: #fff;
+        z-index: -2;
+        filter: blur(40px);
+    }
+    .box:before,
+    .box:after {
+        background: linear-gradient(245deg,#89ff00,#060c21,#00bcd4)
+    }
+    .content {
+        padding: 20px;
+        box-sizing: border-box;
+        color: #fff;
+    }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="content">
+            <h1>김주연</h1>
+            <p>고동을 이것을 행복스럽고 지혜는 위하여서. 몸이 청춘이 고동을 청춘에서만 무엇이 소리다.이것은 광야에서 사랑의 이것이다. 구하지 천자만홍이 든 말이다. 피고 위하여, 산야에 붙잡아 끝에 바이며, 속잎나고, 이성은 고행을 것이다. 얼마나 어디 대한 위하여서, 하는 길을 낙원을 사막이다. 앞이 설레는 위하여서 이상의 피어나기 이것이다. 밥을 이상은 장식하는 그러므로 어디 동산에는 내려온 아름다우냐? 품었기 못할 같지 그와 눈이 위하여 풍부하게 힘있다. 사는가 하여도 얼마나 우리 눈이 살았으며, 것이다.</p>
+            <p>풀밭에 군영과 무엇이 있으며, 천하를 기관과 보라. 새가 끝까지 지혜는 칼이다. 그들의 봄바람을 노래하며 길을 영원히 뭇 하여도 곳으로 할지라도 사막이다. 눈에 인류의 대한 것이다. 놀이 가장 피고 동산에는 가치를 끓는다. 없으면, 그들은 가는 산야에 얼마나 것이다. 그들은 설산에서 찬미를 그들은 무엇을 불어 가치를 사막이다. 열락의 어디 붙잡아 모래뿐일 끓는 청춘의 그들을 피어나기 부패뿐이다. 전인 생명을 풀이 품고 거친 사막이다.</p>
+        </div>
+    </div>
+</body>
+</html>
