@@ -9,6 +9,7 @@ config.*
 _mdeia
 /1mincoding-bbc-covid19
 1mincoding-bbc-covid19/
+*.ini
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
